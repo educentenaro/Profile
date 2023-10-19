@@ -1,0 +1,39 @@
+{
+    "workbench.editor.untitled.hint": "hidden",
+    "workbench.iconTheme": "icons",
+    "liveServer.settings.donotVerifyTags": true,
+    "liveServer.settings.donotShowInfoMsg": true,
+    "explorer.confirmDelete": false,
+    "editor.codeActionsOnSave": {
+        "source.fixAll": true,
+        "source.fixAll.eslint": true,
+    },
+    "eslint.codeActionsOnSave.rules": null,
+    "eslint.execArgv": null,
+    "eslint.format.enable": true,
+    "settingsSync.ignoredSettings": [
+        "eslint.format.enable"
+    ],
+    "explorer.confirmDragAndDrop": false,
+    "[typescript]": {
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    },
+    "tabnine.experimentalAutoImports": true,
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    },
+    "editor.formatOnSave": true,
+    "workbench.editor.empty.hint": "hidden",
+    "eslint.codeActionsOnSave.mode": "problems",
+    "eslint.run": "onSave",
+    "eslint.probe": [
+        "javascript",
+        "javascriptreact",
+        "typescript",
+        "typescriptreact",
+        "html",
+        "vue",
+        "markdown",
+        "typescriptnext"
+    ],
+}

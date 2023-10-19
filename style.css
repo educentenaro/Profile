@@ -1,0 +1,166 @@
+* {
+  margin: 0;
+  padding: 0px;
+  box-sizing: border-box; /* mede atraves da borda, utilizado para design responsivo pois redimenciona
+  o tamanho total do elemento pois dessa vez, a largura da borda e o preenchimento estão incluídos no calc */
+}
+
+:root {
+  --text-color: black;
+  --bg-url: url(./assets/assets/Background.png);
+  --stroke-color-mode: 1px solid rgba(0, 0, 0, 0.5);
+  --text-color-mode: black;
+  --surface-color-mode-hover: rgba(0, 0, 0, 0.05);
+  --text-color-footer: rgba(31, 31, 31, 0.748);
+  --sun-or-moon: url(./assets/sun.svg);
+}
+
+.dark {
+  --text-color: white;
+  --bg-url: url(./assets/assets/bg-mobile.jpg);
+  --stroke-color-mode: 1px solid rgba(255, 255, 255, 0.5);
+  --text-color-mode: #fff;
+  --surface-color-mode-hover: rgba(255, 255, 255, 0.05);
+  --text-color-footer: rgba(255, 255, 255, 0.5);
+  --sun-or-moon: url(./assets/moon.svg);
+}
+
+body {
+  background: var(--bg-url) no-repeat top center/cover;
+  transition: all 0.7s ease;
+}
+body * {
+  font-family: "Inter", sans-serif;
+  color: var(--text-color);
+}
+
+#container {
+  width: 360px;
+  /*border: 1px solid red;*/
+  margin: 56px auto; /* deixa um espaço do topo e centraliza */
+}
+
+#profile {
+  text-align: center;
+  padding: 24px; /* afasta do topo e das laterais e de baixo */
+}
+
+#profile img {
+  width: 112px;
+  display: inline;
+  /* tudo que for inline, nao permite o uso do margin auto, e sim do text-align, e tudo que for block, permite o margin auto */
+  margin: auto;
+}
+
+#profile p {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  margin-top: 8px;
+}
+
+#switch {
+  position: relative;
+  width: 64px;
+  margin: 2px auto;
+}
+
+#switch button {
+  height: 32px;
+  width: 32px;
+  background: white var(--sun-or-moon) center no-repeat;
+  border: 0.1px solid rgb(216, 216, 216);
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  z-index: 1;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.dark #switch button {
+  right: 0;
+  left: initial;
+}
+
+#switch span {
+  display: block;
+  width: 64px;
+  height: 24px;
+  border-radius: 9999px;
+  border: var(--stroke-color-mode);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+ul {
+  /* esta alinhando cada botão em si */
+  list-style: none;
+  padding: 24px 24px 0px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+ul li {
+  /* esta estilizando o botão */
+  border-radius: 8px;
+  border: var(--stroke-color-mode);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  padding: 16px 24px;
+  transition: all 0.2s ease;
+}
+
+ul li a {
+  /* estilizando o texto */
+  text-decoration: none;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ul li:hover {
+  border-radius: 8px;
+  border: 1.5px solid var(--text-color-mode);
+  background: var(--surface-color-mode-hover);
+  transition: all 0.2s ease;
+}
+
+#social-links {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 16px;
+  gap: 16px;
+  transition: all 0.2s ease;
+}
+#social-links ion-icon {
+  width: 26px;
+  height: 26px;
+}
+#social-links a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+}
+
+#social-links a:hover {
+  background-color: var(--surface-color-mode-hover);
+  border-radius: 50%;
+  transition: all 0.2s ease;
+}
+
+#footer p {
+  color: var(--text-color-footer);
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+}
